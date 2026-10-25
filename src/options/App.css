@@ -1,0 +1,165 @@
+#root {
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  padding: 1rem;
+}
+
+.options-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.options-form div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.options-form textarea {
+  resize: none;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-box-bg);
+  color: var(--color-text);
+  font-family: monospace;
+
+  scrollbar-width: none;
+  wrap: soft;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+}
+
+.options-form input {
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-box-bg);
+  color: var(--color-text);
+  font-family: monospace;
+}
+
+/* Range inputs should not use the same padding as text inputs
+   so they fill the available width without extra whitespace */
+.options-form input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  padding: 0; /* remove the 0.5rem padding applied to inputs */
+  height: 28px;
+  background: transparent;
+  border: none;
+}
+
+.options-form input[type="range"]:focus {
+  outline: none;
+}
+
+/* Basic track/thumb styling so appearance is consistent */
+.options-form input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  background: var(--color-border);
+  border-radius: 3px;
+}
+.options-form input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--color-text);
+  border-radius: 50%;
+  margin-top: -5px; /* center the thumb on the track */
+}
+.options-form input[type="range"]::-moz-range-track {
+  height: 6px;
+  background: var(--color-border);
+  border-radius: 3px;
+}
+.options-form input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: var(--color-text);
+  border-radius: 50%;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: var(--color-modal-bg);
+  color: var(--color-text);
+  padding: 1rem;
+  border-radius: 12px;
+  width: 80vw;
+  height: min-content;
+
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.error-text {
+  color: #c62828;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.invalid {
+  border-color: #c62828 !important;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.15);
+}
+
+.website-input-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.website-input-container input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-box-bg);
+  color: var(--color-text);
+  font-family: monospace;
+}
+
+.website-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.website-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: var(--color-box-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.save-button-bottom {
+  margin-top: 2rem;
+}
